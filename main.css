@@ -1,0 +1,69 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    overflow: hidden;
+}
+
+page {
+    display: block;
+    margin: 50px auto;
+    width: 800px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+header {
+    height: 180px;
+    background-image: url("banner2.jpg");
+    border-radius: 15px;
+    background-size: cover;
+    background-position: 0 20%;
+}
+
+navbar ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: sans;
+    font-size: 1.2em;
+}
+
+navbar ul li label {
+    cursor: pointer;
+}
+
+navbar ~ input[type="radio"][name="navSelect"],
+navbar ~ content {
+    display: none;
+}
+
+input[type="radio"]:checked#navOne ~ .navOne {
+    display: block;
+}
+input[type="radio"]:checked#navTwo ~ .navTwo {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    page {
+      width: 100%;
+      margin: calc(50 / 800 * 100vw) auto;
+      padding: 0 calc(50 / 800 * 100vw);
+    }
+    header {
+        height: calc(180 / 800 * 100vw);
+    }
+}
